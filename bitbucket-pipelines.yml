@@ -1,4 +1,4 @@
-image: devkinetic/bitbucket-pipelines-agent:dev
+image: devkinetic/bitbucket-pipelines-agent:develop
 
 pipelines:
   # Build sandboxes for all branches
