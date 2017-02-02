@@ -1,4 +1,4 @@
-image: docksal/bitbucket-pipelines-agent:1.0
+image: devkinetic/bitbucket-pipelines-agent:dev
 
 pipelines:
   # Build sandboxes for all branches
