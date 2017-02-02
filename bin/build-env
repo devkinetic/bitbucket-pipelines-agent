@@ -25,8 +25,8 @@ DOCKSAL_HOST="${DOCKER_HOST:-$DOCKER_HOST_IP.xip.io}"
 export DOMAIN="$BRANCH_NAME_SAFE.$BITBUCKET_REPO_SLUG_SAFE.$DOCKSAL_HOST"
 
 echo "Configuring ssh access..."
-(umask  077 ; echo "$CI_SSH_KEY" | base64 -d > $HOME/.ssh/id_rsa)
-(umask  077 ; echo "$DOCKER_HOST_SSH_KEY" | base64 -d > $HOME/.ssh/docker_host_id_rsa)
+(umask  077 ; echo "$CI_SSH_KEY" | base64 -d -i > $HOME/.ssh/id_rsa)
+(umask  077 ; echo "$DOCKER_HOST_SSH_KEY" | base64 -d -i > $HOME/.ssh/docker_host_id_rsa)
 
 # Use DOCKER_HOST (domain name) if set, otherwise use DOCKER_HOST_IP (IP)
 if [[ $DOCKER_HOST != "" ]]; then
