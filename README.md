@@ -28,20 +28,24 @@ The agent expects the following required variables to be defined.
 
 The address of the remote Docker host, which will be hosting sandboxes. Configure one of the other.  
 If using `DOCKER_HOST`, make sure the domain is configured as a wildcard DNS entry.  
-If using `DOCKER_HOST_IP`, the agent will use `xip.io` for dynamic wildcard domain names for sandboxes. 
+If using `DOCKER_HOST_IP`, the agent will use `xip.io` for dynamic wildcard domain names for sandboxes.
 
 `DOCKER_HOST_SSH_KEY`
 
 A base64 encoded private SSH key used to access the remote Docker host.  
-See [Access remote hosts via SSH](https://confluence.atlassian.com/bitbucket/access-remote-hosts-via-ssh-847452940.html) 
+See [Access remote hosts via SSH](https://confluence.atlassian.com/bitbucket/access-remote-hosts-via-ssh-847452940.html)
 tutorial for details.
+
+`DOCKER_HOST_SSH_USER`
+
+The ssh user on the Docker host.
 
 `CI_SSH_KEY`
 
 A second SSH keys (base64 encoded as well), which can be used for deployments and other remote operations run directly on the agent.  
 E.g. cloning/pushing a repo, running commands over SSH on a remote deployment environment.
 
-### Project level Pipelines variables 
+### Project level Pipelines variables
 
 The following environment variables can be configured in the project's Pipelines settings:
 

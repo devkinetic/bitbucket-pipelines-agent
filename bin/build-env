@@ -35,6 +35,9 @@ else
 	sed -i "s/DOCKER_HOST/$DOCKER_HOST_IP/g" $HOME/.ssh/config
 fi
 
+# Set the ssh user for docker host machine
+sed -i "s/DOCKER_USER/$DOCKER_HOST_SSH_USER/g" $HOME/.ssh/config
+
 # Configure git
 git config --global user.email "${CI_GIT_USER_EMAIL:-bitbucket-pipelines-agent@docksal.io}"
 git config --global user.name "${CI_GIT_USER_NAME:-Bitbucket Pipelines Agent}"
