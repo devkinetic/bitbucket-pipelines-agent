@@ -15,7 +15,7 @@ fi
 # Trim repo slug to 30 characters. If someone has a repo name longer than that, then no mercy for them.
 export BITBUCKET_REPO_SLUG_SAFE="${BITBUCKET_REPO_SLUG:0:30}"
 export BRANCH_NAME_SAFE
-export REMOTE_BUILD_DIR="/home/ubuntu/builds/$BITBUCKET_REPO_SLUG_SAFE-$BRANCH_NAME_SAFE"
+export REMOTE_BUILD_DIR="/home/$DOCKER_HOST_SSH_USER/builds/$BITBUCKET_REPO_SLUG_SAFE-$BRANCH_NAME_SAFE"
 export COMPOSE_PROJECT_NAME="$BITBUCKET_REPO_SLUG_SAFE-$BRANCH_NAME_SAFE"
 
 # Use DOCKER_HOST (domain name) if set, otherwise use DOCKER_HOST_IP (IP) with xip.io
